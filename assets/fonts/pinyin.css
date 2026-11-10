@@ -1,0 +1,3 @@
+/* Derived from Andika 7.000; SIL OFL 1.1. See /assets/licenses/andika-OFL.txt. */
+@font-face{font-family:'PinyinClassroom';src:url('/assets/fonts/pinyin-classroom.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
+.pinyin-font,.word-pinyin,[lang="zh-CN"]:not(html) rt,.story-zh rt,.say-zh rt,.bubble-zh small{font-family:'PinyinClassroom',sans-serif!important;font-feature-settings:'ss01' 0,'ss13' 0,'ss14' 0;font-style:normal}

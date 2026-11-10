@@ -1,0 +1,37 @@
+拼音录音与字体来源说明（2026-11-08）
+
+audio-cmn 真人拼音录音
+项目：https://github.com/hugolpz/audio-cmn
+核查版本：f759a0f18f27690742957619e1248ed91e9b3f2c
+许可及署名原文见：
+https://github.com/hugolpz/audio-cmn/blob/f759a0f18f27690742957619e1248ed91e9b3f2c/README.md
+上游 Voices 表记载："Chen Wang, CC-by-sa"；License 段记载：
+"CC-by-sa. See table upper for authors."
+上游 README 未注明 CC BY-SA 的版本号，也未附独立 LICENSE 文件；本项目不自行补写版本号。
+原始 README 随包保留在 /assets/licenses/audio-cmn-README.md。
+本轮仅使用 64k/syllabs/ 下 a1–a4、o1–o4、e1–e4 共 12 个 cmn-{音节}{声调}.mp3。
+署名：拼音录音来自 audio-cmn，录音人 Chen Wang，许可 CC BY-SA。
+Hugo Lopez：项目管理、仓库、音频压缩和文件重命名；Nicolas Vion：录音软件和技术支持。
+文件按原字节保存，未剪辑或重新编码。再分发这些录音须保留署名、许可和来源；
+如制作、分发录音改编作品，应遵守相同方式共享要求。不得将录音单独改标为项目代码许可。
+每个文件的原始 URL、SHA256 和字节数见 /assets/pinyin/audio-cmn/manifest.json。
+课堂慢速仅在浏览器中以 0.75 倍速、保持音高播放，不生成另一个音频文件。
+第 1 课 a/o/e 及四声共 15 项已根据项目负责人导出的试听结果确认正确；审核依据见 docs/foundations-approved-20261110.json。
+
+旧合成拼音方案
+原方案 1、2 的 34 个拼音文件移至本机 assets-archive/pinyin-synthetic-v1/；
+未删除原文件字节，不进入 public、dist、PWA 或 Git 提交。
+正式试听页只播放已采用的方案 3 拼音录音，不再提供旧合成拼音的播放接口；原文件及原审核 JSON 继续在本机归档保留。
+爸爸、哥哥、A/B 字母名、apple/baby 已确认采用方案 1 合成录音；英文字母只教大小写、字母名和例词，不教单独字母发音，试听页不再列出相应项目。
+
+Andika 拼音字体子集
+来源：https://github.com/silnrsi/font-andika/releases/tag/v7.000
+Copyright (c) 2004-2025 SIL Global (https://www.sil.org/)
+许可：SIL Open Font License 1.1，完整原文随包保留于 /assets/licenses/andika-OFL.txt。
+项目将 Andika 7.000 Regular 缩减为当前拼音文字所需字符及其字形组件，并转换为 WOFF2。
+为遵守保留字体名 Andika、SIL 的限制，修改后的主要名称为 Pinyin Classroom，
+PostScript 名称为 PinyinClassroom-Regular，CSS 使用 PinyinClassroom。
+保留原默认单层 a、g；不替换文本的 Unicode 码位，不开启双层字形变体。
+仅分发此字形子集，不分发完整字体包。字符、源字体及产物哈希见 /assets/fonts/pinyin-subset.json。
+生成方法：scripts/subset-pinyin-font.py --source-zip Andika-7.000.zip（需 fonttools、brotli）。
+字体子集继续适用 OFL 1.1，不把 OFL 改为项目代码许可；英文字母和英文词语使用原英文字体。
